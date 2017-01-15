@@ -1,0 +1,56 @@
+---
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Fact Check the News
+  description: |
+    #### Processes a URL to a news article or blog post and returns metadata that can be used to assess the trustworthiness of the content.
+schemes:
+  - https
+consumes:
+  - text/plain
+produces:
+  - application/json
+host: api.factcheckthe.news
+basePath: /v1
+paths:
+  /check:
+    get:
+      parameters:
+        - name: url
+          in: query
+          description: Article URL
+          required: true
+          type: string
+      responses:
+        200:
+          description: Metadata about the provided URL
+          schema:
+            $ref: '#/definitions/ContentScore'
+definitions:
+  ContentScore:
+    type: object
+    properties:
+      url:
+        type: string
+      score:
+        type: number
+        format: float
+      meta:
+        $ref: '#/definitions/ScoreCriteria'
+  ScoreCriteria:
+    type: object
+    properties:
+      opensources:
+        $ref: '#/definitions/OpenSourcesCheck'
+  OpenSourcesCheck:
+    type: object
+    properties:
+      flag:
+        type: boolean
+      type:
+        type: string
+      credible:
+        type: string
+      
+
