@@ -36,7 +36,7 @@ definitions:
       score:
         type: number
         format: float
-      meta:
+      criteria:
         $ref: '#/definitions/ScoreCriteria'
   ScoreCriteria:
     type: object
