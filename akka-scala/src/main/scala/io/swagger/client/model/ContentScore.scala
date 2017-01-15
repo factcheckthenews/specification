@@ -12,7 +12,7 @@ import org.joda.time.DateTime
 case class ContentScore (
   url: Option[String],
   score: Option[Float],
-  meta: Option[ScoreCriteria]
+  criteria: Option[ScoreCriteria]
 ) extends ApiModel
 
 
