@@ -43,6 +43,8 @@ definitions:
     properties:
       opensources:
         $ref: '#/definitions/OpenSourcesCheck'
+      https:
+        $ref: '#/definitions/HTTPSCheck'
   OpenSourcesCheck:
     type: object
     properties:
@@ -52,5 +54,5 @@ definitions:
         type: string
       credible:
         type: string
-      
-
+  HTTPSCheck:
+    type: boolean
