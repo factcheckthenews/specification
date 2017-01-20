@@ -45,6 +45,8 @@ definitions:
         $ref: '#/definitions/OpenSourcesCheck'
       https:
         $ref: '#/definitions/HTTPSCheck'
+      webOfTrust:
+        $ref: '#/definitions/WebOfTrustCheck'
   OpenSourcesCheck:
     type: object
     properties:
@@ -56,3 +58,19 @@ definitions:
         type: string
   HTTPSCheck:
     type: boolean
+  WebOfTrustCheck:
+    type: object
+    properties:
+      trustworthiness:
+        type: object
+        properties:
+          reputation:
+            type: number
+          confidence:
+            type: number
+          description:
+            type: string
+      categories:
+        type: array
+        items: 
+          type: string
