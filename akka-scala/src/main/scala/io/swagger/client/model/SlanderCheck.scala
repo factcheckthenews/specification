@@ -9,11 +9,9 @@ package io.swagger.client.model
 import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 
-case class ScoreCriteria (
-  opensources: Option[OpenSourcesCheck],
-  https: Option[HTTPSCheck],
-  webOfTrust: Option[WebOfTrustCheck],
-  slander: Option[SlanderCheck]
+case class SlanderCheck (
+  flag: Option[Boolean],
+  keywords: Option[Seq[SlanderCheck_keywords]]
 ) extends ApiModel
 
 
