@@ -47,6 +47,8 @@ definitions:
         $ref: '#/definitions/HTTPSCheck'
       webOfTrust:
         $ref: '#/definitions/WebOfTrustCheck'
+      slander:
+        $ref: '#/definitions/SlanderCheck'
   OpenSourcesCheck:
     type: object
     properties:
@@ -74,3 +76,17 @@ definitions:
         type: array
         items: 
           type: string
+  SlanderCheck:
+    type: object
+    properties:
+      flag:
+        type: boolean
+      keywords:
+        type: array
+        items:
+          type: object
+          properties:
+            term:
+              type: string
+            label:
+              type: string
