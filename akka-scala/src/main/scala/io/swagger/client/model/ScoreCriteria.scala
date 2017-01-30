@@ -13,6 +13,7 @@ case class ScoreCriteria (
   opensources: Option[OpenSourcesCheck],
   https: Option[HTTPSCheck],
   webOfTrust: Option[WebOfTrustCheck],
+  capitalization: Option[CapitalizationCheck],
   slander: Option[SlanderCheck]
 ) extends ApiModel
 

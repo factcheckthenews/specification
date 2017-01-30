@@ -9,11 +9,9 @@ package io.swagger.client.model
 import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 
-case class WebOfTrustCheck (
-  reputation: Option[Double],
-  confidence: Option[Double],
-  description: Option[String],
-  categories: Option[Seq[String]]
+case class PunctuationCheck (
+  flag: Option[Boolean],
+  tokens: Option[Seq[String]]
 ) extends ApiModel
 
 
