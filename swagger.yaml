@@ -47,6 +47,10 @@ definitions:
         $ref: '#/definitions/HTTPSCheck'
       webOfTrust:
         $ref: '#/definitions/WebOfTrustCheck'
+      capitalization:
+        $ref: '#/definitions/CapitalizationCheck'
+      punctuation:
+        $ref: '#/definitions/PunctuationCheck'
       slander:
         $ref: '#/definitions/SlanderCheck'
   OpenSourcesCheck:
@@ -63,18 +67,45 @@ definitions:
   WebOfTrustCheck:
     type: object
     properties:
-      trustworthiness:
-        type: object
-        properties:
-          reputation:
-            type: number
-          confidence:
-            type: number
-          description:
-            type: string
+      reputation:
+        type: number
+      confidence:
+        type: number
+      description:
+        type: string
       categories:
         type: array
-        items: 
+        items:
+          type: string
+  CapitalizationCheck:
+    type: object
+    properties:
+      title:
+        type: object
+        properties:
+          flag:
+            type: boolean
+          uppercase:
+            type: number
+          percent:
+            type: number
+      content:
+        type: object
+        properties:
+          flag:
+            type: boolean
+          uppercase:
+            type: number
+          percent:
+            type: number
+  PunctuationCheck:
+    type: object
+    properties:
+      flag:
+        type: boolean
+      tokens:
+        type: array
+        items:
           type: string
   SlanderCheck:
     type: object
