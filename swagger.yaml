@@ -45,6 +45,8 @@ definitions:
         $ref: '#/definitions/OpenSourcesCheck'
       https:
         $ref: '#/definitions/HTTPSCheck'
+      deceptiveDomain:
+        $ref: '#/definitions/DeceptiveDomainCheck'
       webOfTrust:
         $ref: '#/definitions/WebOfTrustCheck'
       capitalization:
@@ -63,6 +65,8 @@ definitions:
       credible:
         type: string
   HTTPSCheck:
+    type: boolean
+  DeceptiveDomainCheck:
     type: boolean
   WebOfTrustCheck:
     type: object
