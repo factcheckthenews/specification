@@ -53,6 +53,8 @@ definitions:
         $ref: '#/definitions/CapitalizationCheck'
       punctuation:
         $ref: '#/definitions/PunctuationCheck'
+      spelling:
+        $ref: '#/definitions/SpellCheck'
       slander:
         $ref: '#/definitions/SlanderCheck'
   OpenSourcesCheck:
@@ -111,6 +113,8 @@ definitions:
         type: array
         items:
           type: string
+  SpellCheck:
+    type: boolean
   SlanderCheck:
     type: object
     properties:
