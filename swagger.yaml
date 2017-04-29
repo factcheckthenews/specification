@@ -62,8 +62,6 @@ definitions:
         type: boolean
       type:
         type: string
-      credible:
-        type: string
   HTTPSCheck:
     type: boolean
   DeceptiveDomainCheck:
